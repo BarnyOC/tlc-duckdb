@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: tlc
+    schema: stg
+    description: NYC TLC yellow taxi Parquet
+    tables:
+      - name: yellow_trips
+        description: One row per trip

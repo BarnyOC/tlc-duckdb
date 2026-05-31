@@ -1,0 +1,12 @@
+  services:
+    dbt:
+      image: dbt-duckdb:local
+      user: "${UID}:${GID}"
+      working_dir: /usr/app
+      volumes:
+        - ./dbt_project:/usr/app
+        - ./data/raw:/data/raw:ro
+        - ./data:/data:rw
+      stdin_open: true
+      tty: true
+      entrypoint: ["dbt"]
