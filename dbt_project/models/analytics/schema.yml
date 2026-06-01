@@ -1,0 +1,17 @@
+# AIModified:2026-06-01T07:29:46Z
+version: 2
+
+models:
+  - name: anl_taxi_daily
+    description: One row per day with trip counts and revenue.
+    columns:
+      - name: pickup_date
+        tests:
+          - unique
+          - not_null
+      - name: trip_count
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
